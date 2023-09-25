@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASOIAF Index Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <script src="js/bootstrap.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet">
+  <script src="js/login.js"></script>
+</head>
+
+<!--animation put on h1class-->
+<body style="text-align: center;">
+  <h1 class="animation">Welcome to the ASOIAF Index</h1>
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Set Username<span
+      class="glyphicon glyphicon-home"></span></button>
+
+  <div id="id01" class="modal">
+
+    <!--image within modal-->
+    <form class="modal-content animate" action="index.html" onsubmit="" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="images/user0.jpg" alt="Avatar" id="avatar" name="avatar" class="avatar">
+      </div>
+
+      <!--Profile pic select-->
+      <select name="userImages" id="userImages" onchange="setImage(this);">
+        <option selected disabled>Choose Profile Picture </option>
+        <option value="images/user1.jpg">Option 1</option>
+        <option value="images/user2.jpg">Option 2</option>
+        <option value="images/user3.jpg">Option 3</option>
+        <option value="images/user4.jpg">Option 4</option>
+        <option value="images/user5.jpg">Option 5</option>
+        <option value="images/user6.jpg">Option 6</option>
+        <option value="images/user7.jpg">Option 7</option>
+        <option value="images/user8.jpg">Option 8</option>
+      </select><br />
+      <img src="" name="image-swap" />
+
+
+      <!--set user-->
+      <div class="container">
+        <label for="uname"><b>Set Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+
+
+        <button id="loginBtn" onclick="getUser()" type="submit" disabled>Login</button>
+        <button id="registerBtn" onclick="setUser()" type="button">Register Username</button>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" name="updates" id="updates" value="1">
+          <label for="updates" class="form-check-label">Remember Me</label>
+        </div>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
